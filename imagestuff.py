@@ -9,7 +9,7 @@ def getval2(Filename): #gets pixel values for a single bmp image
     Nx,Nz = value.shape
     return value, Nx, Nz, Filename
     
-def getc2(folder,namebase,imageroot): #applies getval to all four images in a set
+def getc2(folder,namebase,imageroot,mydet='D'): #applies getval to all four images in a set
     detectors = 'A', 'B', 'C', 'D'
     for det in detectors:
         Filename = folder+namebase+imageroot + '-' + det + '.bmp'
@@ -40,6 +40,7 @@ def getc2(folder,namebase,imageroot): #applies getval to all four images in a se
     #pixelsize = float(dummy[16][10:])/1000 #microns
     fileref.close()
     dx = dy = pixelsize
+    Filename = folder+namebase+imageroot + '-' + mydet + '.bmp'
     
     return dx,dy,cA,cB,cC,cD,Filename
 
