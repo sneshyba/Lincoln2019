@@ -13,7 +13,7 @@ def getc2(folder,namebase,imageroot,mydet='D'): #applies getval to all four imag
     detectors = 'A', 'B', 'C', 'D'
     for det in detectors:
         Filename = folder+namebase+imageroot + '-' + det + '.bmp'
-        #print(Filename)
+        print(Filename)
         value, Nx, Ny, Filename = getval2(Filename)
         if det == 'A':
             cA = value #raw bmp data
