@@ -95,7 +95,7 @@ def rotation_matrix(axis, theta_deg):
                      [2*(bc-ad), aa+cc-bb-dd, 2*(cd+ab)],
                      [2*(bd+ac), 2*(cd-ab), aa+dd-bb-cc]]))
 
-def solveforabc(xa,ya,xb,yb,xc,yc):
+def solveforabc(xa,ya,xb,yb,xc,yc,startwith = 0):
 
     from sympy import S, Eq, solve
     from numpy import linalg as LA
@@ -116,7 +116,8 @@ def solveforabc(xa,ya,xb,yb,xc,yc):
 
     # Print which one looks most physically reasonable
     print("found", len(solution), "solutions")
-    for i in range(len(solution)):
+    for i in range(startwith,len(solution)):
+        print('solveforabc is looking at solution', i)
         if  solution[i][bmag] >= 0 and \
             solution[i][cmag] >= 0 and \
             solution[i][amag] >= 0 and \
