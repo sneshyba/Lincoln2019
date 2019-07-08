@@ -3,7 +3,8 @@
     nxsegments = 3
     nacross = 35
     ndown = 35
-    nxstart = 645
-    ny1start = 290    
-/
+    nxstart = 610
+    ny1start = 210
+  
+
 
