@@ -4,23 +4,3 @@
     labellist = '+','*','x'
     boxsize = 40
 /
-
-&Vectors
-    xorigin = 900
-    yorigin = 295
-    xa = 745
-    ya = 170
-    xb = 800
-    yb = 484
-    xc = 737
-    yc = 215
-/
-
-&Euler
-    xorigin = 906
-    yorigin = 290
-    alpha = 155
-    beta = 60
-    gamma = -60
-/
-
